@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0c0c0c;
+  color: white;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgb(86, 43, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: linear-gradient(45deg, black, rgb(110, 79, 155));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+.content-home {
+  width: 50%;
+}
+
+.content-home h1 {
+  font-size: 58px;
+  font-weight: 700;
+  position: relative;
+  animation: slideRight 2s ease-in-out;
+}
+
+.content-home h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content-home p {
+  font-size: 14px;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+.btn {
+  position: relative;
+  padding: 10px;
+  width: 120px;
+  height: 45px;
+  /* background: blueviolet; */
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, blueviolet, rgb(68, 68, 218), blue);
+  z-index: -1;
+  border-radius: 40px;
+  background-size: 200%;
+}
+
+.btn:hover::before {
+  background-position: 100% 0;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, blueviolet, blue);
+  z-index: -1;
+  border-radius: 40px;
+  background-size: 200%;
+  background-position: 0 0;
+  filter: blur(5px);
+}
+.btn:hover::after {
+  background-position: 200% 0;
+  background: linear-gradient(45deg, rgb(37, 37, 193), blueviolet);
+}
+
+.home-sosmed a {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, black, blueviolet);
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+  filter: drop-shadow();
+  box-shadow: white 30%;
+  z-index: 1;
+}
+
+.home-sosmed a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0c0c0c;
+  border-radius: 50%;
+  transform: scale(0.88);
+  z-index: -1;
+}
+
+.home-sosmed a:hover::after {
+  transform: scale(0);
+}
+
+.about {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  /* padding: 0 10%; */
+  padding-top: 5%;
+  padding-inline: 10%;
+}
+.content-about {
+  width: 50%;
+  padding-top: 5%;
+}
+
+.content-about h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.content-about h3 {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.content-about ul {
+  font-size: 14px;
+  text-align: justify;
+}
+.content-about li {
+  margin-left: 30px;
+}
+
+.experince {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+.container-exp {
+  display: flex;
+  padding: 0 10%;
+  margin-bottom: 10%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  background: transparent;
+}
+
+.container-exp .box-exp {
+  flex: 1 1;
+  /* background: rgb(62, 62, 62); */
+  background: transparent;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  /* border: 0.2rem solid var(rgb(103, 46, 183)); */
+}
+.box-exp {
+  border: 2px solid blueviolet;
+
+  filter: brightness();
+  box-shadow: 10px violet;
+}
+.container-exp .box-exp h3 {
+  font-size: 24px;
+  font-weight: 600;
+  background: transparent;
+}
+.container-exp .box-exp h4 {
+  font-size: 18px;
+  font-weight: 200;
+  background: transparent;
+}
+.container-exp .box-exp p {
+  font-size: 14px;
+  background: transparent;
+}
+
+.container-exp :hover {
+  background: linear-gradient(45deg, rgb(37, 37, 193), blueviolet);
+  background-position: 100% 0;
+  border: transparent;
+}
+
+.heading {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  align-items: center;
+  /* margin-top: 5%; */
+}
+
+.image-banner {
+  position: relative;
+  animation: moveUpDown 4s infinite ease-in-out;
+}
+
+.Project {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  padding: 0 5%;
+}
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  align-content: center;
+  justify-content: center;
+}
+
+.project-cards {
+  width: 350px;
+  height: 350px;
+  margin: 40px;
+  position: relative;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgb(41, 4, 71);
+  /* box-shadow: 5px 5px 30px blueviolet; */
+  border: 3px solid blueviolet;
+}
+
+.img-project {
+  width: 340px;
+  height: 340px;
+  object-fit: fill;
+}
+
+.desc {
+  height: 200px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.735);
+  border-radius: 0px 0px 20px 20px;
+  color: white;
+}
+
+.desc h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.desc p {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.project-cards:hover {
+  width: 350px;
+  height: 350px;
+  margin: 40px;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgb(37, 37, 193), blueviolet);
+  box-shadow: 5px 5px 30px blueviolet;
+  border: transparent;
+}
+
+.project-cards:hover .desc {
+  position: absolute;
+  top: 225px;
+  left: 0px;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0); /* Initial and final state: no vertical movement */
+  }
+  50% {
+    transform: translateY(-50px); /* Midpoint: move up by 50 pixels */
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-20%); /* Start from the left, outside of the viewport */
+  }
+  to {
+    transform: translateX(0); /* Move to the original position (0) on the x-axis */
+  }
+}
